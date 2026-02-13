@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "211744902089",
+    "project_id": "friendzy-app-ui",
+    "storage_bucket": "friendzy-app-ui.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:211744902089:android:14f4533565eb8fcdc2f618",
+        "android_client_info": {
+          "package_name": "com.example.friendzy_ui_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBLr9oRGTkeZpvSvpvKKM71-9ZeVjL9Y8M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

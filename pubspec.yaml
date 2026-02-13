@@ -7,9 +7,19 @@ environment:
   sdk: ^3.10.4
 
 dependencies:
+  firebase_auth: ^6.1.4
+  firebase_core: ^4.4.0
   flutter:
     sdk: flutter
+    # for open  street map
+  flutter_map: ^8.2.2
+  flutter_screenutil: ^5.9.3
   flutter_svg: ^2.2.3
+  google_fonts: ^8.0.1
+  # google map flutter isliay package add kiya tha jb hm google map API console sai map integrate krty, lekin abhi open street map use krrhy tou iski need nhi
+  google_maps_flutter: ^2.14.0
+  google_sign_in: ^7.2.0
+  latlong2: ^0.9.1
 
 dev_dependencies:
   flutter_test:
@@ -20,3 +30,10 @@ flutter:
   uses-material-design: true
   assets:
     - assets/
+  fonts:
+    - family: Hellix
+      fonts:
+        - asset: assets/fonts/Hellix-Regular.ttf
+        - asset: assets/fonts/Hellix-Medium.ttf
+        - asset: assets/fonts/Hellix-Bold.ttf
+
