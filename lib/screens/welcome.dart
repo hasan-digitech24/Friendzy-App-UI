@@ -1,9 +1,9 @@
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:friendzy_ui_app/screens/botton_nav_bar.dart';
 import 'package:friendzy_ui_app/screens/google_sign_in.dart';
-import 'package:google_sign_in/google_sign_in.dart';
+import 'package:friendzy_ui_app/utils/app_colors.dart';
+import 'package:friendzy_ui_app/widgets/custom_button.dart';
 
 class WelcomeScreen extends StatelessWidget {
   const WelcomeScreen({super.key});
@@ -18,88 +18,51 @@ class WelcomeScreen extends StatelessWidget {
             // SizedBox(height: 64),
             Image.asset(
               'assets/welcome_screen_image.png',
-              width: 311,
-              height: MediaQuery.heightOf(context)/2,
+              // height: MediaQuery.heightOf(context) / 2,
+              height: 0.5.sh,
             ),
-            SizedBox(height: 20),
+            SizedBox(height: 20.h),
             Text(
               "Let's meeting new\npeople around you",
-              style: TextStyle(fontFamily: 'Hellix',fontSize: 28, fontWeight: FontWeight.w700),
-            ),
-            SizedBox(height: 32),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 40),
-              child: ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Color(0xff4B164C),
-                  minimumSize: Size(MediaQuery.widthOf(context), 56),
-                  padding: EdgeInsets.only(left: 8)
-                ),
-                onPressed: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=>BottomNavigationBarScreen()));
-                },
-                child: Row(
-                  children: [
-                    Container(
-                      padding: EdgeInsets.all(8),
-                      width: 40,height: 40,decoration: BoxDecoration(color: Colors.white,shape: BoxShape.circle)
-                      ,child: SvgPicture.asset('assets/phone_icon.svg')),
-                    SizedBox(width: 37),
-        
-                    Text(
-                      'Login with Phone',
-                      style: TextStyle(
-                        fontSize: 16,
-                        fontWeight: FontWeight.w700,
-                        color: Colors.white,
-                      ),
-                    ),
-                  ],
-                ),
+              style: TextStyle(
+                fontFamily: 'Hellix',
+                fontSize: 28.sp,
+                fontWeight: FontWeight.w700,
               ),
             ),
-            SizedBox(height: 16),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 40),
-              child: ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Color.fromRGBO(252, 243, 250, 1),
-                  minimumSize: Size(MediaQuery.widthOf(context), 56),
-                  padding: EdgeInsets.only(left: 8)
-        
-                ),
-                onPressed: () async{
-                  await GoogleSignInService().signInWithGoogle(context);
-                 
-
-
-                },
-                child: Row(
-                  children: [
-                    Container(padding: EdgeInsets.all(8),
-                      width: 40,height: 40,decoration: BoxDecoration(color: Colors.white,shape: BoxShape.circle)
-                      ,child: SvgPicture.asset('assets/google_icon.svg')),
-                    SizedBox(width: 37),
-                    Text(
-                      'Login with Google',
-                      style: TextStyle(
-                        fontSize: 16,
-                        fontWeight: FontWeight.w700,
-                        color: Color(0xff4B164C),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
+            SizedBox(height: 32.h),
+            CustomButton(
+              text: 'Login with Phone',
+              image: 'assets/phone_icon.svg',
+              bgcolor: AppColors.primaryColor,
+              txtcolor: AppColors.backgroundColor,
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => BottomNavigationBarScreen(),
+                  ),
+                );
+              },
             ),
-            SizedBox(height: 32),
+            SizedBox(height: 16.h),
+            CustomButton(
+              text: 'Login with Google',
+              image: 'assets/google_icon.svg',
+              bgcolor: AppColors.backgroundColor,
+              txtcolor: AppColors.primaryColor,
+              onPressed: () async {
+                await GoogleSignInService().signInWithGoogle(context);
+              },
+            ),
+            SizedBox(height: 32.h),
             Row(
-              mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisAlignment: .center,
               children: [
                 Text(
                   "Don't have an account? ",
                   style: TextStyle(
-                    fontSize: 14,
+                    fontSize: 14.sp,
                     fontWeight: FontWeight.w400,
                     // color: Color(0xff4B164C),
                   ),
@@ -107,9 +70,9 @@ class WelcomeScreen extends StatelessWidget {
                 Text(
                   'Sign Up',
                   style: TextStyle(
-                    fontSize: 14,
+                    fontSize: 14.sp,
                     fontWeight: FontWeight.w600,
-                    color: Color.fromRGBO(225, 151, 213, 1),
+                    color: AppColors.lightPink,
                   ),
                 ),
               ],
