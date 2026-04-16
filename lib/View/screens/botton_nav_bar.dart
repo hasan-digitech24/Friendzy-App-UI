@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:friendzy_ui_app/screens/add.dart';
-import 'package:friendzy_ui_app/screens/discover.dart';
-import 'package:friendzy_ui_app/screens/home.dart';
-import 'package:friendzy_ui_app/screens/matches.dart';
-import 'package:friendzy_ui_app/screens/messages.dart';
+import 'package:friendzy_ui_app/View/screens/add.dart';
+import 'package:friendzy_ui_app/View/screens/discover.dart';
+import 'package:friendzy_ui_app/View/screens/home.dart';
+import 'package:friendzy_ui_app/View/screens/matches.dart';
+import 'package:friendzy_ui_app/View/screens/messages.dart';
 
 class BottomNavigationBarScreen extends StatefulWidget {
   const BottomNavigationBarScreen({super.key});

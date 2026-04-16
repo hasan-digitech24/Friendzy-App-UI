@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:friendzy_ui_app/widgets/bordered_icon.dart';
+import 'package:friendzy_ui_app/View/widgets/bordered_icon.dart';
 
 class HeaderSection extends StatelessWidget {
   const HeaderSection({super.key});

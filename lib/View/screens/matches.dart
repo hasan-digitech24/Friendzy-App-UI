@@ -3,7 +3,8 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:friendzy_ui_app/screens/connect.dart';
+import 'package:friendzy_ui_app/View/screens/connect.dart';
+import 'package:go_router/go_router.dart';
 
 class MatchesScreen extends StatelessWidget {
   MatchesScreen({super.key});
@@ -270,7 +271,7 @@ class MatchesScreen extends StatelessWidget {
                       minimumSize: Size(60,30),
                       padding: EdgeInsets.all(8)
                     ),onPressed: (){
-                      Navigator.push(context, MaterialPageRoute(builder: (context)=>ConnectScreen()));
+                          context.push('/connect');
                     }, child: Text('Connect Clara',
                                 style: TextStyle(
                                   fontSize: 14.sp,

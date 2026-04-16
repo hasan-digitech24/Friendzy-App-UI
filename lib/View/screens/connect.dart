@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:go_router/go_router.dart';
 
 class ConnectScreen extends StatelessWidget {
   const ConnectScreen({super.key});
@@ -27,7 +28,7 @@ class ConnectScreen extends StatelessWidget {
                   ),
                   child: IconButton(
                     onPressed: () {
-                      Navigator.pop(context);
+                      context.pop();
                     },
                     icon: SvgPicture.asset(
                       'assets/back_icon.svg',

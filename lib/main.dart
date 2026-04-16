@@ -1,14 +1,16 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:friendzy_ui_app/Route/app_route.dart';
 import 'package:friendzy_ui_app/firebase_options.dart';
-import 'package:friendzy_ui_app/screens/welcome.dart';
+import 'package:friendzy_ui_app/View/screens/welcome.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
-  runApp(const MainApp());
+  runApp(ProviderScope(child: const MainApp()));
 }
 
 class MainApp extends StatelessWidget {
@@ -22,10 +24,10 @@ class MainApp extends StatelessWidget {
       splitScreenMode: true,
       minTextAdapt: true,
       builder: (_, child) {
-        return MaterialApp(
+        return MaterialApp.router(
           theme: ThemeData(fontFamily: 'Hellix'),
           debugShowCheckedModeBanner: false,
-          home: child,
+          routerConfig: AppRoutes().router,
         );
       },
       child: WelcomeScreen(),

@@ -4,10 +4,10 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:friendzy_ui_app/widgets/add_story_btn.dart';
-import 'package:friendzy_ui_app/widgets/header_section.dart';
-import 'package:friendzy_ui_app/widgets/horizontal_list.dart';
-import 'package:friendzy_ui_app/widgets/story_widget.dart';
+import 'package:friendzy_ui_app/View/widgets/add_story_btn.dart';
+import 'package:friendzy_ui_app/View/widgets/header_section.dart';
+import 'package:friendzy_ui_app/View/widgets/horizontal_list.dart';
+import 'package:friendzy_ui_app/View/widgets/story_widget.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
